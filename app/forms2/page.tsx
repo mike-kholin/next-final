@@ -6,11 +6,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { User2 } from "./actions";
 
-const serverSchema = z.object({
-  name: z.string(),
-  description: z.string(),
-});
-
 // Client-side schema
 const clientSchema = z.object({
   name: z.string().min(1, "Name is required"),
